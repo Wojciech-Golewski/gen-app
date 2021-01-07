@@ -1,25 +1,18 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ShopTableComponent } from './shop-table.component';
+import { ShopTableComponent } from "./shop-table.component";
 
 describe('ShopTableComponent', () => {
-  let component: ShopTableComponent;
-  let fixture: ComponentFixture<ShopTableComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ShopTableComponent ]
-    })
-    .compileComponents();
-  });
+  let fixture: ShopTableComponent;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShopTableComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture = new ShopTableComponent();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('Component setup', () => {
+    describe('constructor', () => {
+      it('should create a component', () => {
+        expect(fixture).toBeTruthy();
+      })
+    });
   });
+
 });
