@@ -1,10 +1,10 @@
-import { AppComponent } from "./app.component";
+import { ShopTableComponent } from "./shop-table.component";
 
-describe('AppComponent', () => {
-  let fixture: AppComponent;
+describe('ShopTableComponent', () => {
+  let fixture: ShopTableComponent;
 
   beforeEach(() => {
-    fixture = new AppComponent();
+    fixture = new ShopTableComponent();
   });
 
   describe('Component setup', () => {

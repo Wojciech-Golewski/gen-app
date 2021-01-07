@@ -1,10 +1,10 @@
-import { AppComponent } from "./app.component";
+import { MainShopComponent } from "./main-shop.component";
 
-describe('AppComponent', () => {
-  let fixture: AppComponent;
+describe('MainShopComponent', () => {
+  let fixture: MainShopComponent;
 
   beforeEach(() => {
-    fixture = new AppComponent();
+    fixture = new MainShopComponent();
   });
 
   describe('Component setup', () => {
