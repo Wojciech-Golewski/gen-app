@@ -10,7 +10,7 @@ describe('AppComponent', () => {
   describe('Component setup', () => {
     describe('constructor', () => {
       it('should create a component', () => {
-        expect(fixture).toBeTruthy();
+        expect(fixture).toBeTruthy();a
       })
     });
   });
