@@ -1,4 +1,4 @@
-import { ShopTableComponent } from "./shop-table.component";
+import { ShopTableComponent } from './shop-table.component';
 
 describe('ShopTableComponent', () => {
   let fixture: ShopTableComponent;
@@ -11,8 +11,7 @@ describe('ShopTableComponent', () => {
     describe('constructor', () => {
       it('should create a component', () => {
         expect(fixture).toBeTruthy();
-      })
+      });
     });
   });
-
 });
