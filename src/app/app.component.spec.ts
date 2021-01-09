@@ -1,4 +1,4 @@
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   let fixture: AppComponent;
@@ -11,8 +11,7 @@ describe('AppComponent', () => {
     describe('constructor', () => {
       it('should create a component', () => {
         expect(fixture).toBeTruthy();
-      })
+      });
     });
   });
-
 });

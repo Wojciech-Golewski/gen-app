@@ -1,4 +1,4 @@
-import { MainShopComponent } from "./main-shop.component";
+import { MainShopComponent } from './main-shop.component';
 
 describe('MainShopComponent', () => {
   let fixture: MainShopComponent;
@@ -11,8 +11,7 @@ describe('MainShopComponent', () => {
     describe('constructor', () => {
       it('should create a component', () => {
         expect(fixture).toBeTruthy();
-      })
+      });
     });
   });
-
 });
