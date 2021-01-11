@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('../shop/shop.module').then((m) => m.ShopModule),
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('../shop/shop.module').then((m) => m.ShopModule),
+      },
+    ],
   },
 ];
 
