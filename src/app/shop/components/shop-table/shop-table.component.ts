@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -55,7 +55,7 @@ const NAMES: string[] = [
   templateUrl: './shop-table.component.html',
   styleUrls: ['./shop-table.component.scss'],
 })
-export class ShopTableComponent {
+export class ShopTableComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
   dataSource: MatTableDataSource<UserData>;
 
@@ -70,12 +70,12 @@ export class ShopTableComponent {
     this.dataSource = new MatTableDataSource(users);
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
 
-  applyFilter(event: Event) {
+  applyFilter(event: Event): void {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
@@ -87,7 +87,7 @@ export class ShopTableComponent {
 
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
-  const name =
+  const n =
     NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
     ' ' +
     NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
@@ -95,7 +95,7 @@ function createNewUser(id: number): UserData {
 
   return {
     id: id.toString(),
-    name: name,
+    name: n,
     progress: Math.round(Math.random() * 100).toString(),
     color: COLORS[Math.round(Math.random() * (COLORS.length - 1))],
   };
