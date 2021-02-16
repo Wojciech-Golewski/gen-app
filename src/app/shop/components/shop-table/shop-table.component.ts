@@ -14,8 +14,8 @@ export class ShopTableComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['id', 'name', 'price', 'hoursToMake'];
   dataSource: MatTableDataSource<Building>;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
   constructor(private buildingApiService: BuildingApiService) {}
 
